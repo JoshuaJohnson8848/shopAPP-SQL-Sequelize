@@ -1,0 +1,21 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/nav.ejs') %>
+        <div class="grid">
+            <main class="centered">
+                <h1><%= product.title %></h1>
+                <!-- Here there is no loop so we can access the data likewise we send as key value pair ( {product : product}) -->
+                <!-- Thats why we are accesing like ( product.title ) here the product is the key in the Key value pair -->
+                <!-- If there is Loop , the temporary variable in the Loop will be used instead of using key in the Key value pair -->
+                <hr>
+                <div>
+                    <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+                </div>
+                <h2>$<%= product.price %></h2>
+                <p><%= product.description %></p>
+                <%- include('../includes/add-to-cart.ejs') %>
+            </main>
+        </div>
+        <%- include('../includes/end.ejs') %>
